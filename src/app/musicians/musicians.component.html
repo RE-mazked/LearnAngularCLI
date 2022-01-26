@@ -1,7 +1,9 @@
 <h2>My Musicians</h2>
 <ul class="musicians">
-  <li *ngFor="let musician of musicians" [class.selected]="musician == selectedMusician" (click)="onSelect(musician)">
-    <span class="badge">{{musician.id}}</span> {{musician.name}}
+  <li *ngFor="let musician of musicians">
+    <a routerLink="/detail/{{musician.id}}">
+      <span class="badge">{{musician.id}}</span> {{musician.name}}
+    </a>
   </li>
 </ul>
 <!--<div *ngIf="selectedMusician">

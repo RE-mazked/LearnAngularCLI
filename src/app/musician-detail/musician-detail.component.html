@@ -3,6 +3,7 @@
   <div><span>Id: </span>{{musician.id}}</div>
   <div>
     <label for="musician-name">Musician name: </label>
-    <input id="musician-name" [(ngModel)]="musician.name" placeholder="name">
+    <input id="musician-name" [(ngModel)]="musician.name" placeholder="Musician name">
   </div>
+  <button (click)="goBack()">Go back</button>
 </div>

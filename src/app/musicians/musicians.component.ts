@@ -14,11 +14,6 @@ export class MusiciansComponent implements OnInit {
 
   selectedMusician?: Musician;
 
-  onSelect(musician: Musician): void {
-    this.selectedMusician = musician;
-    this.messageService.add(`MusicianComponent: Selected musician id=${musician.id}`);
-  }
-
   getMusicians(): void {
     this.musicianService.getMusicians().subscribe(musicians => this.musicians = musicians)
   }

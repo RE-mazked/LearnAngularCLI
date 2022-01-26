@@ -1,1 +1,6 @@
-<p>dashboard works!</p>
+<h2>Top Musicians</h2>
+<div class="musicians-menu">
+  <a *ngFor="let musician of musicians" routerLink="/detail/{{musician.id}}">
+    {{musician.name}}
+  </a>
+</div>

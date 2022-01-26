@@ -13,7 +13,11 @@ export class MusicianService {
     this.messageService.add('MusicianService: fetched musicians')
     return musician;
   }
-
+  getMusician(id: number): Observable<Musician> {
+    const musician = MUSICIANS.find(h => h.id === id)!;
+    this.messageService.add(`MusicianService: fetched musician id=${id}`);
+    return of(musician);
+  }
   constructor(private messageService: MessageService) {
   }
 }
